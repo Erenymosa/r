@@ -1,0 +1,27 @@
+#include <iostream>
+    #include <algorithm>
+    #include <cmath>
+    #include <string>
+    #include <iomanip> 
+using namespace std;
+int main()
+{ long long z,x[100001],c[100001],m=0;
+cin>>z;
+x[0]=0; c[0]=0;
+for(int i=1;i<=z;i++){
+    cin>>x[i]; c[i]=x[i];
+} sort (x,x+z+1);
+sort(c,c+z+1);
+for(int i=1;i<=z;i++){
+    x[i]+=x[i-1];
+}
+for(int i=1;i<=z;i++){
+    if(x[z]%2==0){cout<<x[z]; break;}
+    else{
+        for(int j=1;j<=z;j++){
+            if(c[j]%2!=0){m=c[j]; break;}
+        }
+       cout<<x[z]-m; break;
+    }
+}
+    return 0;}
