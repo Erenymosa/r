@@ -1,0 +1,29 @@
+#include <iostream>
+    #include <algorithm>
+    #include <cmath>
+    #include <string>
+    #include <iomanip> 
+using namespace std;
+int main()
+{ int z,x,c,v,b,n,m;
+cin>>z>>x>>c>>v>>b>>n;
+cin>>m;
+  if((z+x+c)%5==0){
+      if((z+x+c)/5<=m)m-=(z+x+c)/5;
+      else m=-1;
+  }
+  else {
+      if((z+x+c)/5<=m-1)m-=((z+x+c)/5)+1;
+      else m=-1;
+  }
+  if((v+b+n)%10==0){
+      if((v+b+n)/10<=m)m-=(v+b+n)/10;
+      else m=-1;
+  }
+  else{
+      if((v+b+n)/10<=m-1)m-=((v+b+n)/10)+1;
+      else m=-1;
+  }
+  if(m>=0)cout<<"YES";
+  else cout<<"NO";
+    return 0;}
