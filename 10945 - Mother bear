@@ -1,0 +1,25 @@
+#include <iostream>
+    #include <algorithm>
+    #include <cmath>
+    #include <string>
+    #include <iomanip> 
+using namespace std;
+int main()
+{long long a,q=0;    string z,x;
+	getline(cin,z);  
+	while(z!="DONE"){ a=z.size();
+		for(int j=0;j<a;j++){
+		   if(z[j]==' '||z[j]==','||z[j]=='!'||z[j]=='?'||z[j]=='.'){ q+=1;
+		   for(int i=j;i<a;i++){
+		       z[i]=z[i+1];
+		   }a--;  j--; 
+		   }}x=z; 
+		   reverse(z.begin()+1,z.end()-1-q);
+		   if(x==z&&(x[0]==z[a-1]-32||x[0]==z[a-1]))cout<<"You won't be eaten!"<<endl;
+		   else cout<<"Uh oh.."<<endl;
+		   getline(cin,z);
+	    a=z.size();
+	    q=0;
+	}
+return 0;
+}
