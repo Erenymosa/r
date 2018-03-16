@@ -1,0 +1,35 @@
+#include <iostream>
+    #include <algorithm>
+    #include <cmath>
+    #include <string>
+    #include <iomanip> 
+using namespace std;
+int main()
+{ std::ios_base::sync_with_stdio(0);
+   cin.tie(NULL);
+   long long z,x,c,v=0,a[100001],s[100001]={0},n=0;
+	cin>>z>>x;
+	a[0]=0;   
+	for(int i=1;i<=z;i++){
+	    cin>>a[i];
+	  //  cout<<s[i];
+	    }
+	     for(int j=z;j>0;j--){ 
+	         int w=a[j];
+	         if(s[w]>0){a[j]=0;}
+	         else s[w]++;
+		   }
+		for(int q=1;q<=z;q++){ 
+		    if(a[q]>0){
+		    n++;
+				}
+			 a[q]=n;
+		}
+			for(int i=0;i<x;i++){ cin>>c;
+		   v=a[z]-a[c-1];
+		   cout<<v<<endl;
+		   v=0;}
+			
+	
+return 0;
+}
